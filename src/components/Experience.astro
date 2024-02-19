@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "1 Julio del 2021 al 31 de diciembre del 2021",
+    company: "SENNOVA",
+    description:
+      "Diseño y creación de un equipo medidor de gases. Creación de un aplicativo web, con HTML, Css, JavaScript junto con PHP. Creación de base de datos MYQSL Programación en Arduino para sensores que captan gases del medio ambiente. Sistema que capta las mediciones de arduino y las envié a una base de datos MYSQL.",
+    occupation: "Tecnologo en análisis y desarrollo de sistemas de información",
+  },
+  {
+    date: "25 Abril del 2022 al 19 de Febrero del 2024",
+    company: "KONECTA",
+    description:
+      "Desarrollador Frontend y Backend, especializado en realizar integraciones en Java, Python y JavaScript.",
+    occupation: "Analista de desarrollo IVR Experto I",
+  }
+  
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  
+  {
+    EXPERIENCE.map((experience) => (
+        <ExperienceItem {...experience} />
+    ))
+  }
+</ol>
